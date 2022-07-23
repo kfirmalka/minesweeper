@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>The Mine Sweeper Game</title>
+        <link rel="stylesheet" href="css/main.css">    
+        <link rel="icon" href="./img/icon.png" type="image/jpg">
+    </head>
+    <body onload="initGame()">
+        <div class="top">
+            <h1>Welcome to "The Mine Sweeper" Game</h1>
+            <ul class="game-level">
+                <li data-id="1" onclick="initGame(0)" style="background-color: #27ae60;">Easy</li>
+                <li data-id="2" onclick="initGame(1)" style="background-color: #2980b9;">Medium</li>
+                <li data-id="3" onclick="initGame(2)" >Hard</li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="smiley">
+                <span onclick="restartGame()"></span>
+            </div>
+            <div class="lives">
+                <span></span>
+            </div>
+            <div class="timer">
+
+            </div>
+            <div class="message">
+                <p></p>
+            </div>
+            <table class="board-style">
+                <tbody class="board"></tbody>
+            </table>
+            <div class="safe-button">
+                <button onclick="safeButtonShow()" type="button" class="safe">Safe Button</button><br/><br/>
+                You got only <span></span> safe buttons left.
+            </div>
+        </div>
+        <div class="footer">
+            <p>	&#169; This Game Created by Kfir Malka 2022</p>
+
+        </div>
+        <script src="js/util.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+
+</html>
